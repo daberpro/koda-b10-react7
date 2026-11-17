@@ -17,22 +17,23 @@ export default function LoginPage() {
     }
 
     return (
-        <div>
-            <div>
-                <Link to={"/"}>Home</Link>
-                <form onSubmit={handleSubmit} action="">
-                    <div>
-                        <label htmlFor="email">email</label>
-                        <input name="email" id="email" type="email" />
+        <div className="w-full h-screen flex flex-col items-center justify-center">
+            <div className="w-150 h-fit p-4 border border-black/25 rounded-xl flex justify-center items-start flex-col">
+                <form className="w-full items-center flex flex-col justify-start gap-4" onSubmit={handleSubmit} action="">
+                    <div className="w-full flex flex-col justify-start items-start gap-2">
+                        <label className="text-lg" htmlFor="email">email</label>
+                        <input placeholder="your@mail.com" className="w-full border border-black/25 rounded-lg p-4" name="email" id="email" type="email" />
                     </div>
-                    <div>
-                        <label htmlFor="password">password</label>
-                        <input name="password" id="password" type="password" />
+                    <div className="w-full flex flex-col justify-start items-start gap-2">
+                        <label className="text-lg" htmlFor="password">password</label>
+                        <input placeholder="password" className="w-full border border-black/25 rounded-lg p-4" name="password" id="password" type="password" />
                     </div>
 
-                    <button type="submit">
+                    <button className="w-full p-4 rounded-lg bg-black text-white cursor-pointer" type="submit">
                         Login
                     </button>
+
+                    <Link className="w-full p-4 rounded-lg border border-black text-center" to={"/"}>Back Home</Link>
                 </form>
             </div>
         </div>
